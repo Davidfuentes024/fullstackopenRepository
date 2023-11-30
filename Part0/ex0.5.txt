@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/spa/new_note_spa
+    activate server
+    server-->>browser: GET HTML document
+    deactivate server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/spa/main.css
+    activate server
+    server-->>browser: GET CSS
+    deactivate server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/spa/spa.js
+    activate server
+    server-->>browser: GET JS
+    deactivate server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: GET JSON
+    deactivate server
+
+   
